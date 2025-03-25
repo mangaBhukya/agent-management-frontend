@@ -6,6 +6,8 @@ Welcome to the Agent Management App frontend! This is a React-based frontend usi
 - TypeScript
 - Tailwind CSS
 - Shadcn UI
+- Axios for API Requests
+- React Hooks for State Management
 
 ## Features
 - Create and Manage Agents
@@ -68,5 +70,4 @@ After validation, the tasks will be distributed equally among the agents.
 Tasks are displayed in a clean table format.
 
 
-## Configure API URL
-Make sure the backend is running on http://localhost:5000/api.
+Make sure the **backend** is running on http://localhost:5000/api.
