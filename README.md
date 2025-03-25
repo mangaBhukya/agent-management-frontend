@@ -1,6 +1,12 @@
 # **Agent Management App - Frontend**
 Welcome to the Agent Management App frontend! This is a React-based frontend using Next.js, TypeScript, Tailwind CSS, and Shadcn UI. It provides a clean and responsive interface to manage agents, upload CSV files, distribute tasks, and view the assigned tasks.
 
+## Tech Stack
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+
 ## Features
 - Create and Manage Agents
 - Upload CSV for Task Distribution
