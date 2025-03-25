@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Agent Management App - Frontend**
+Welcome to the Agent Management App frontend! This is a React-based frontend using Next.js, TypeScript, Tailwind CSS, and Shadcn UI. It provides a clean and responsive interface to manage agents, upload CSV files, distribute tasks, and view the assigned tasks.
 
-## Getting Started
+## Features
+- Create and Manage Agents
+- Upload CSV for Task Distribution
+- View Agent Lists
+- View Distributed Tasks
+- Responsive UI with Tailwind CSS
 
-First, run the development server:
+## Prerequisites
+### Ensure you have the following installed before proceeding:
+- Node.js (>= 20.x)
+- npm
+- Git
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation
+### Clone the Repository
+First, clone the frontend repo from GitHub:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- git clone https://github.com/mangaBhukya/agent-management-frontend.git
+- cd agent-management-frontend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Install Dependencies
+Use the following command to install all the required packages:
+- npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Initialize Shadcn UI
+Shadcn UI will help with ready-made components. Run:
+- npx shadcn@latest init
 
-## Learn More
+Add the required components:
+- npx shadcn@latest add button input card table
 
-To learn more about Next.js, take a look at the following resources:
+###  Start the Application
+Once everything is installed and configured, run the app:
+- npm run dev
+- The app will be available at:
+http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage Guide
+### Home Page
+- Access the homepage at /.
+You’ll see navigation links to Create Agent, View Agents, Upload CSV, and View Tasks.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Create Agent
+- Go to /createAgent.
+Fill out the form with name, email, phone number, and password.
+Click Submit to add the agent.
 
-## Deploy on Vercel
+### View Agents
+- Visit /agents to see a list of all agents.
+Agents are displayed with their details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Upload CSV
+- Navigate to /upload.
+Upload a .csv, .xlsx, or .xls file with columns for FirstName, Phone, and Notes.
+After validation, the tasks will be distributed equally among the agents.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### View Tasks
+- Go to /tasks to view the distributed tasks for each agent.
+Tasks are displayed in a clean table format.
+
+
+## Configure API URL
+Make sure the backend is running on http://localhost:5000/api.
