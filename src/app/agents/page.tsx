@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { getAgents } from "@api/agentApi";
+import AgentTable from "@/components/AgentTable";
 import { Card, CardContent, CardHeader, CardTitle } from "@components/ui/card";
 
 const AgentsPage: React.FC = () => {
@@ -27,14 +28,8 @@ const AgentsPage: React.FC = () => {
         <CardTitle>Agent List</CardTitle>
       </CardHeader>
       <CardContent>
-        {error && <p className="text-red-500">{error}</p>}
-        <ul>
-          {agents.map((agent) => (
-            <li key={agent._id}>
-              {agent.name} - {agent.email} - {agent.mobile}
-            </li>
-          ))}
-        </ul>
+        {error && <p className="text-red-500 mb-4">{error}</p>}
+        <AgentTable agents={agents} />
       </CardContent>
     </Card>
   );
